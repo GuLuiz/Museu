@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "trueOrFalse.C": "cpp",
+        "Login.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
