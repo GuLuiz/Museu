@@ -1,23 +1,21 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <String.h>
+#include "bilheteria.h"
 
 int MenuVisitante() {
     char nome[50];
-
+    int teste;
+    system("cls");
     printf("\n***********************************************");
     printf("\nMENU VISITANTE");
-    printf("\nDigite seu nome: ");
-    fgets(nome, sizeof(nome), stdin);
-
-    // Consuma a nova linha deixada pela entrada do nome
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-
     printf("\n1 - Bilheteria");
     printf("\n2 - Obras");
     printf("\n3 - Sair");
-    printf("%s", nome);
+    scanf("%d",&teste);
+    if(teste == 1){
+        bilheteria();
+    }
 
     return 0;
 }

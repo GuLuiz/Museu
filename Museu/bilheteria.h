@@ -22,7 +22,7 @@ void Print();
 FILE *arquivo;
 FILE *code;
 // Código  Principal
-int main()
+int bilheteria()
 {
 
     arquivo = fopen("Bilhete.txt", "r");
