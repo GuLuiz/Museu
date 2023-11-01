@@ -4,4 +4,31 @@ NOME:nicollas
 ENTRADA:Isenta
 EMAIL:nicollas@gmail.com
 
+<<<<<<< Updated upstream
 
+=======
+====================================================
+CÓDIGO DE CADASTRO : 1
+====================================================
+NOME:marcinho
+ENTRADA:Inteira
+EMAIL:marcinho@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 2
+====================================================
+NOME:gu petras
+
+ENTRADA:Meia
+EMAIL:gu@gu.com
+
+====================================================
+CÓDIGO DE CADASTRO : 0
+====================================================
+NOME:Gustavo
+
+ENTRADA:Inteira
+EMAIL:gustaluiz
+
+====================================================
+>>>>>>> Stashed changes

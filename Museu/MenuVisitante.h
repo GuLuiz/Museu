@@ -6,6 +6,9 @@
 
 int MenuVisitante() {
     int teste;
+    do
+    {
+    
     system("cls");
     printf("==============================================\n");
     printf("             Menu Visitante\n");
@@ -19,12 +22,23 @@ int MenuVisitante() {
     scanf("%d", &teste);
     if (teste == 1)
     {
-        bilheteria();
+        char resposta;
+        do
+        {
+            bilheteria();
+            printf("Deseja realizar outro Cadastro? (s/n)");
+            resposta = getchar();
+
+        } while (resposta == "s" || resposta =="S");
+        
+        
     }
     else if(teste == 2){
-
+        system("cls");
+        
         obras();
     }
 
+    } while (teste != 3);
     return 0;
 }
