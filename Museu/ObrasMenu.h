@@ -14,7 +14,7 @@ void obras()
     printf("\n1 - Nikola Tesla");
     printf("\n2 - O grito");
     printf("\n3 - Santos Dumont");
-    printf("\n4 - 100 anos da arte mordena");
+    printf("\n4 - 100 anos da arte moderna");
     printf("\n0 - Sair");
     printf("Escolha a obra desejada: ");
     scanf("%d", &define);

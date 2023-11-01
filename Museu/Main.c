@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include "Login.h" 
-#include "bilheteria.h"
+
     
 int main()
 {

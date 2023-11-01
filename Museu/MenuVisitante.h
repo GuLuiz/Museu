@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <String.h>
-#include "obras.h"
+#include "bilheteria.h"
+#include "ObrasMenu.h"
 
 int MenuVisitante() {
-    char nome[50];
     int teste;
     system("cls");
     printf("==============================================\n");
@@ -20,6 +20,10 @@ int MenuVisitante() {
     if (teste == 1)
     {
         bilheteria();
+    }
+    else if(teste == 2){
+
+        obras();
     }
 
     return 0;

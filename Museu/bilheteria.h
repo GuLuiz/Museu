@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <ctype.h>
-#include "MenuVisitante.h"
+
 
 struct Bilhete
 {
@@ -28,7 +28,6 @@ int bilheteria()
         code = fopen("CadastroCod.txt", "r");
         fscanf(code, "%d", &cod);
 
-        int optionTheme = 0;
         int optionTicket = 0;
         system("cls");
         printf("\nNOME: ");
@@ -87,8 +86,7 @@ int bilheteria()
         printf("Gerar outro bilhete? s/n\n");
         resposta = getchar();
 
-    } while (resposta == "s" || resposta == "S");
-    MenuVisitante();
+    } while (resposta = "s" || resposta == "S");
 
 }
 
