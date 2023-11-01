@@ -3,17 +3,22 @@
 #include <String.h>
 #include "bilheteria.h"
 
-int MenuVisitante() {
-    char nome[50];
+int MenuVisitante()
+{
     int teste;
     system("cls");
-    printf("\n***********************************************");
-    printf("\nMENU VISITANTE");
-    printf("\n1 - Bilheteria");
-    printf("\n2 - Obras");
-    printf("\n3 - Sair");
-    scanf("%d",&teste);
-    if(teste == 1){
+    printf("==============================================\n");
+    printf("             Menu Visitante\n");
+    printf("==============================================\n");
+    printf("\nEscolha uma opcao:\n");
+    printf("1) %-20s\n", "Bilheteria");
+    printf("2) %-20s\n", "Obras");
+    printf("3) %-20s\n\n", "Sair");
+    printf("==============================================\n");
+
+    scanf("%d", &teste);
+    if (teste == 1)
+    {
         bilheteria();
     }
 
