@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <String.h>
-#include "bilheteria.h"
+#include "obras.h"
 
-int MenuVisitante()
-{
+int MenuVisitante() {
+    char nome[50];
     int teste;
     system("cls");
     printf("==============================================\n");
