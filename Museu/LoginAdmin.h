@@ -16,8 +16,8 @@ int LoginAdmin()
 
     FILE *LoginAdmin;
     FILE *SenhaAdmin;
-    LoginAdmin = fopen("D:\\Login\\Login.txt", "r");
-    SenhaAdmin = fopen("D:\\Login\\Senha.txt", "r");
+    LoginAdmin = fopen("C:\\Museu\\Museu\\output\\Login.txt", "r");
+    SenhaAdmin = fopen("C:\\Museu\\Museu\\output\\Senha.txt", "r");
 
     if (LoginAdmin == NULL || SenhaAdmin == NULL)
     {
