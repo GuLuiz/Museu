@@ -82,7 +82,6 @@ int bilheteria()
         fprintf(arquivo, "EMAIL:%s\n", Pessoas[i].email);
         fprintf(arquivo, "====================================================\n");
     }
-
     fclose(arquivo); // Fecha o arquivo
 
     cod = cod + indice;
