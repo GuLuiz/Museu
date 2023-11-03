@@ -49,7 +49,7 @@ void obras()
                     scanf(" %c", &res);
                     if (res == 's')
                     {
-                        questionario(1);
+                        questionario(1,NomeValidado);
                         break;
                     }
                     else
@@ -64,7 +64,7 @@ void obras()
                     scanf(" %c", &res);
                     if (res == 's')
                     {
-                        questionario(2);
+                        questionario(2,NomeValidado);
                         break;
                     }
                     else
@@ -79,7 +79,7 @@ void obras()
                     scanf(" %c", &res);
                     if (res == 's')
                     {
-                        questionario(3);
+                        questionario(3,NomeValidado);
                         break;
                     }
                     else
@@ -94,7 +94,7 @@ void obras()
                     scanf(" %c", &res);
                     if (res == 's')
                     {
-                        questionario(4);
+                        questionario(4,NomeValidado);
                         break;
                     }
                     else
