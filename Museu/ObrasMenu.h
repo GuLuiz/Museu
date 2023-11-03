@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
+#include "Quest.h"
 
 FILE *arquivo2;
 void obras()
@@ -42,19 +42,68 @@ void obras()
                 switch (define)
                 {
                 case 1:
+                    char res;
                     system("start C:\\Museu\\Obras\\NikolaTesla.png");
-                    break;
+
+                    printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
+                    scanf(" %c", &res);
+                    if (res == 's')
+                    {
+                        questionario(1);
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
+
                 case 2:
+                    char res;
                     system("start C:\\Museu\\Obras\\OGrito.png");
+                    printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
+                    scanf(" %c", &res);
+                    if (res == 's')
+                    {
+                        questionario(2);
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
                     break;
                 case 3:
+                    char res;
                     system("start C:\\Museu\\Obras\\SantosDumont.png");
+                    printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
+                    scanf(" %c", &res);
+                    if (res == 's')
+                    {
+                        questionario(3);
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
                     break;
                 case 4:
+                    char res;
                     system("start C:\\Museu\\Obras\\VanGogh.png");
+                    printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
+                    scanf(" %c", &res);
+                    if (res == 's')
+                    {
+                        questionario(4);
+                        break;
+                    }
+                    else
+                    {
+                        break;
+                    }
                     break;
 
-                default:
+                case 0:
                     printf("Saindo...");
                     sair++;
                     break;
