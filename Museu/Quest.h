@@ -4,6 +4,7 @@ void questionario(int obra, char Nome)
 {
     char Username = Nome;
     FILE *CountObras = fopen("ObraAcessada.txt", "r");
+
     FILE *QuestTesla = fopen("C:\\Museu\\Obras\\Tesla.txt", "r");
     FILE *QuestGrito = fopen("C:\\Museu\\Obras\\Grito.txt", "r");
     FILE *QuestDumont = fopen("C:\\Museu\\Obras\\Dumont.txt", "r");
@@ -13,16 +14,9 @@ void questionario(int obra, char Nome)
     int CountGrito = 0;
     int CountDumont = 0;
     int CountGogh = 0;
-    fscanf(CountObras, "%d", &CountTesla);
-    fscanf(QuestTesla, "%d", &CountGrito);
-    fscanf(QuestGrito, "%d", &CountDumont);
-    fscanf(QuestDumont, "%d", &CountGogh);
-    fscanf(QuestGogh, "%d", &CountGogh);
+    CountObras = fopen("ObraAcessada.txt", "r");
+    fscanf(CountObras, "%d %d %d %d", &CountTesla, &CountGrito, &CountDumont, &CountGogh);
     fclose(CountObras);
-    fclose(QuestTesla);
-    fclose(QuestGrito);
-    fclose(QuestDumont);
-    fclose(QuestGogh);
 
     if (obra == 1)
     {
@@ -156,16 +150,8 @@ void questionario(int obra, char Nome)
     int cod;
 
     CountObras = fopen("ObraAcessada.txt", "w");
-    fprintf(CountObras, "%d", &CountTesla);
-    fprintf(QuestTesla, "%d", &CountGrito);
-    fprintf(QuestGrito, "%d", &CountDumont);
-    fprintf(QuestDumont, "%d", &CountGogh);
-    fprintf(QuestGogh, "%d", &CountGogh);
+    fprintf(CountObras, "%d %d %d %d", CountTesla, CountGrito, CountDumont, CountGogh);
     fclose(CountObras);
-    fclose(QuestTesla);
-    fclose(QuestGrito);
-    fclose(QuestDumont);
-    fclose(QuestGogh);
 
     //
 }

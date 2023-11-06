@@ -14,3 +14,35 @@ ENTRADA:Meia
 EMAIL:gustaluizgonc@gmail.com
 
 ====================================================
+CÓDIGO DE CADASTRO : 2
+====================================================
+NOME: nicollas
+
+ENTRADA:Inteira
+EMAIL:nic@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 3
+====================================================
+NOME: nicollas
+
+ENTRADA:Inteira
+EMAIL:nic@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 4
+====================================================
+NOME: Nicollas 
+
+ENTRADA:Inteira
+EMAIL:nicollas@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 5
+====================================================
+NOME: nicollas
+
+ENTRADA:Inteira
+EMAIL:nic@gmail.com
+
+====================================================
