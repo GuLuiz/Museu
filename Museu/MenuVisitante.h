@@ -4,27 +4,18 @@
 #include "bilheteria.h"
 #include "ObrasMenu.h"
 
-int MenuVisitante() {
+int MenuVisitante()
+{
     int teste;
-    system("cls");
-    printf("==============================================\n");
-    printf("             Menu Visitante\n");
-    printf("==============================================\n");
-    printf("\nEscolha uma opcao:\n");
-    printf("1) %-20s\n", "Bilheteria");
-    printf("2) %-20s\n", "Obras");
-    printf("3) %-20s\n\n", "Sair");
-    printf("==============================================\n");
-
-    scanf("%d", &teste);
-    if (teste == 1)
+    char resposta;
+    do
     {
         bilheteria();
-    }
-    else if(teste == 2){
+        printf("Deseja realizar outro Cadastro? (s/n)");
+        scanf(" %c", &resposta);
 
-        obras();
-    }
-
+    } while (resposta == 's' || resposta == 'S');
+    
+    obras();
     return 0;
 }
