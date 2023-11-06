@@ -18,7 +18,8 @@ void Cadastro();
 FILE *arquivo;
 FILE *code;
 
-int bilheteria()
+// Função de cadastro de bilhete
+void bilheteria()
 {
     arquivo = fopen("Bilhete.txt", "r");
     code = fopen("CadastroCod.txt", "r");
@@ -39,7 +40,7 @@ int bilheteria()
     while (!(optionTicket == 1 || optionTicket == 2 || optionTicket == 3))
     {
         system("cls");
-        printf("Qual entrada voce gostaria de comprar?? \n");
+        printf("Qual entrada você gostaria de comprar?? \n");
         printf("==============================================\n\n");
 
         printf("(1) - | %-20s | %-20s |\n", "Meia", "ValorX");
@@ -66,7 +67,7 @@ int bilheteria()
     printf("==============================================\n");
     printf("             Bilhete Cadastrado \n");
     printf("==============================================\n");
-    printf("NOME:%s",Pessoas[indice].Name);
+    printf("NOME:%s", Pessoas[indice].Name);
     printf("ENTRADA:%s\n", Pessoas[indice].entrada);
     printf("EMAIL:%s\n", Pessoas[indice].email);
     printf("==============================================\n");
@@ -77,14 +78,15 @@ int bilheteria()
     {
         fprintf(arquivo, "CÓDIGO DE CADASTRO : %d\n", cod);
         fprintf(arquivo, "====================================================\n");
-        fprintf(arquivo, "NOME:%s\n", Pessoas[i].Name);
-        fprintf(arquivo, "ENTRADA:%s\n", Pessoas[i].entrada);
-        fprintf(arquivo, "EMAIL:%s\n", Pessoas[i].email);
-        fprintf(arquivo, "====================================================\n");
+        fprintf(arquivo, "NOME: %s", Pessoas[i].Name);
+        fprintf(arquivo, "\nENTRADA:%s", Pessoas[i].entrada);
+        fprintf(arquivo, "\nEMAIL:%s", Pessoas[i].email);
+        fprintf(arquivo, "\n====================================================\n");
     }
     fclose(arquivo); // Fecha o arquivo
 
     cod = cod + indice;
     code = fopen("CadastroCod.txt", "w");
     fprintf(code, "%d", cod);
+    fclose(code); // Fecha o arquivo de código
 }

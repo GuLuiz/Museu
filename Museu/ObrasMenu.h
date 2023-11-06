@@ -3,25 +3,29 @@
 #include <string.h>
 #include "Quest.h"
 
-FILE *arquivo2;
 void obras()
 {
-    char pesquisa[100];
     char NomeValidado[100];
     int found = 0;
-    arquivo2 = fopen("C\\Museu\\output\\Bilhete.txt", "r");
+    FILE *arquivo2;
     int define;
     int sair = 0;
 
-    printf("Por favor, digite seu Nome para prosseguimos :");
-    fflush(stdin);
-    fgets(NomeValidado, 100, stdin);
+    printf("Por favor, digite seu Nome para prosseguirmos: ");
+    scanf(" %s", NomeValidado);
 
-    while (fgets(pesquisa, 100, arquivo2) != NULL)
-    {
-        if (strstr(pesquisa, NomeValidado) != NULL)
-        {
-            printf("OK, seu nome esta Cadastrado no nosso Sistema! \n");
+    arquivo2 = fopen("C:\\Museu\\Museu\\output\\Bilhete.txt", "r");
+    if (arquivo2 == NULL) {
+        printf("Erro ao abrir o arquivo de bilhetes.\n");
+        return;
+    }
+
+    char pesquisa[100];
+
+    while (fgets(pesquisa, 100, arquivo2) != NULL) {
+        strtok(pesquisa, "\n");
+        if (strstr(pesquisa, NomeValidado) != NULL) {
+            printf("OK, seu nome está cadastrado no nosso Sistema!\n");
             found = 1;
             system("pause");
             while (sair == 0)
@@ -45,7 +49,7 @@ void obras()
                 case 1:
                     system("start C:\\Museu\\Obras\\NikolaTesla.png");
 
-                    printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
+                    printf("Gostaria de responder nosso questionário relacionado à obra? (s/n)");
                     scanf(" %c", &res);
                     if (res == 's')
                     {

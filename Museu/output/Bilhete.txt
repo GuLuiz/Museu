@@ -5,3 +5,12 @@ ENTRADA:Isenta
 EMAIL:nicollas@gmail.com
 
 
+
+CÓDIGO DE CADASTRO : 1
+====================================================
+NOME: Gustavo
+
+ENTRADA:Meia
+EMAIL:gustaluizgonc@gmail.com
+
+====================================================
