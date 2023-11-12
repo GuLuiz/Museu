@@ -2,7 +2,6 @@
 
 int obrasAdm()
 {
-
     int define;
     int sair = 0;
 
@@ -15,12 +14,18 @@ int obrasAdm()
         printf("\n1 - Nikola Tesla");
         printf("\n2 - O grito");
         printf("\n3 - Santos Dumont");
-        printf("\n4 - 100 anos da arte mordena");
+        printf("\n4 - 100 anos da arte moderna");
         printf("\n0 - Sair");
         printf("\nEscolha a obra desejada: ");
         scanf("%d", &define);
+
         switch (define)
         {
+        case 0:
+            sair++;
+            return 1; // Retorna 0 quando o usuário escolhe sair
+            break;
+
         case 1:
             system("start C:\\Museu\\Obras\\NikolaTesla.png");
             break;
