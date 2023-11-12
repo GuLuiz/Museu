@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include "Login.h" 
-
-    
+  
 int main()
 {
     setlocale(LC_ALL, "");
@@ -11,6 +10,3 @@ int main()
 
     return 0;
 }
-
-
-

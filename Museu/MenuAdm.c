@@ -1,5 +1,3 @@
-// MenuAdm.c
-
 #include <stdio.h>
 #include "obrasAdm.h"
 #include "MenuAdm.h"
