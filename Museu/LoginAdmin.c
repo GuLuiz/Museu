@@ -3,7 +3,6 @@
 #include <string.h>
 #include "obrasAdm.h"
 #include "MenuAdm.h"
-#include "LoginAdmin.h"
 
 int LoginAdmin()
 {
