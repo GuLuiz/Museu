@@ -1,8 +1,0 @@
-CÓDIGO DE CADASTRO : 0
-====================================================
-NOME: Gustavo
-
-ENTRADA:Meia
-EMAIL:gustaluiz@gmail.com
-
-====================================================

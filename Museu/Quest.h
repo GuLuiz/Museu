@@ -1,7 +1,7 @@
 #ifndef QUEST_H
 #define QUEST_H
 
-void questionario(int obra, char Nome[]);
+void questionarios(int id, int obras);
 
 
 #endif // LOGIN_ADMIN_H
