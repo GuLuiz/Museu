@@ -1,21 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <String.h>
-#include "bilheteria.h"
-#include "ObrasMenu.h"
+#ifndef MENUVISITANTE_H
+#define MENUVISITANTE_H
 
-int MenuVisitante()
-{
-    int teste;
-    char resposta;
-    do
-    {
-        bilheteria();
-        printf("Deseja realizar outro Cadastro? (s/n)");
-        scanf(" %c", &resposta);
+void MenuVisitante();
 
-    } while (resposta == 's' || resposta == 'S');
-    
-    obras();
-    return 0;
-}
+#endif // LOGIN_ADMIN_H

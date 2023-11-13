@@ -2,7 +2,8 @@
     "files.associations": {
         "trueOrFalse.C": "cpp",
         "Login.C": "cpp",
-        "bilheteria.h": "c"
+        "bilheteria.h": "c",
+        "obrasadm.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
