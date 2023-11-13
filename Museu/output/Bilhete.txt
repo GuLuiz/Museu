@@ -1,49 +1,9 @@
-CÓDIGO DE CADASTRO : 0
-====================================================
-NOME:nicollas
-ENTRADA:Isenta
-EMAIL:nicollas@gmail.com
-
-
-
-CÓDIGO DE CADASTRO : 1
-====================================================
-NOME: Gustavo
-
-ENTRADA:Meia
-EMAIL:gustaluizgonc@gmail.com
-
-====================================================
 CÓDIGO DE CADASTRO : 2
 ====================================================
-NOME: nicollas
+NOME: Gu
 
-ENTRADA:Inteira
-EMAIL:nic@gmail.com
-
-====================================================
-CÓDIGO DE CADASTRO : 3
-====================================================
-NOME: nicollas
-
-ENTRADA:Inteira
-EMAIL:nic@gmail.com
-
-====================================================
-CÓDIGO DE CADASTRO : 4
-====================================================
-NOME: Nicollas 
-
-ENTRADA:Inteira
-EMAIL:nicollas@gmail.com
-
-====================================================
-CÓDIGO DE CADASTRO : 5
-====================================================
-NOME: nicollas
-
-ENTRADA:Inteira
-EMAIL:nic@gmail.com
+ENTRADA: Meia
+EMAIL: gu@gmail.com
 
 ====================================================
 CÓDIGO DE CADASTRO : 6

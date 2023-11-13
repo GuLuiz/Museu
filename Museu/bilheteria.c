@@ -2,18 +2,19 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <ctype.h>
+#include <string.h>
 
 struct Bilhete
 {
+    int ID;
     char Name[20];
     char email[255];
     char entrada[255];
 };
+
 struct Bilhete Pessoas[100];
 int indice = 0;
 int cod;
-
-void Cadastro();
 
 FILE *arquivo;
 FILE *code;
@@ -21,8 +22,8 @@ FILE *code;
 // Função de cadastro de bilhete
 void bilheteria()
 {
-    arquivo = fopen("Bilhete.txt", "r");
-    code = fopen("CadastroCod.txt", "r");
+    arquivo = fopen("C:\\Museu\\Museu\\output\\bilhete.txt", "a"); 
+    code = fopen("C:\\Museu\\Museu\\output\\CadastroCod.txt", "r");
     fscanf(code, "%d", &cod);
 
     int optionTicket = 0;
@@ -43,13 +44,13 @@ void bilheteria()
         printf("Qual entrada você gostaria de comprar?? \n");
         printf("==============================================\n\n");
 
-        printf("(1) - | %-20s | %-20s |\n", "Meia", "ValorX");
-        printf("(2) - | %-20s | %-20s |\n", "Inteira", "ValorY");
+        printf("(1) - | %-20s | %-20s |\n", "Meia", "R$ 10,00");
+        printf("(2) - | %-20s | %-20s |\n", "Inteira", "R$ 20,00");
         printf("(3) - | %-20s | %-20s |\n\n", "Isenta", "R$0");
         printf("==============================================\n");
         scanf("%d", &optionTicket);
     }
-    // Use strcpy para atribuir uma string
+
     if (optionTicket == 1)
     {
         strcpy(Pessoas[indice].entrada, "Meia");
@@ -63,30 +64,30 @@ void bilheteria()
         strcpy(Pessoas[indice].entrada, "Isenta");
     }
 
+    Pessoas[indice].ID = cod;
+
     system("cls");
     printf("==============================================\n");
     printf("             Bilhete Cadastrado \n");
     printf("==============================================\n");
-    printf("NOME:%s", Pessoas[indice].Name);
-    printf("ENTRADA:%s\n", Pessoas[indice].entrada);
-    printf("EMAIL:%s\n", Pessoas[indice].email);
+    printf("ID: %d\n", Pessoas[indice].ID);
+    printf("NOME: %s", Pessoas[indice].Name);
+    printf("ENTRADA: %s\n", Pessoas[indice].entrada);
+    printf("EMAIL: %s\n", Pessoas[indice].email);
     printf("==============================================\n");
     indice++;
-    arquivo = fopen("Bilhete.txt", "a");
 
-    for (int i = 0; i < indice; i++)
-    {
-        fprintf(arquivo, "CÓDIGO DE CADASTRO : %d\n", cod);
-        fprintf(arquivo, "====================================================\n");
-        fprintf(arquivo, "NOME: %s", Pessoas[i].Name);
-        fprintf(arquivo, "\nENTRADA:%s", Pessoas[i].entrada);
-        fprintf(arquivo, "\nEMAIL:%s", Pessoas[i].email);
-        fprintf(arquivo, "\n====================================================\n");
-    }
-    fclose(arquivo); // Fecha o arquivo
+    fprintf(arquivo, "CÓDIGO DE CADASTRO : %d\n", cod);
+    fprintf(arquivo, "====================================================\n");
+    fprintf(arquivo, "NOME: %s", Pessoas[indice - 1].Name);
+    fprintf(arquivo, "\nENTRADA: %s", Pessoas[indice - 1].entrada);
+    fprintf(arquivo, "\nEMAIL: %s", Pessoas[indice - 1].email);
+    fprintf(arquivo, "\n====================================================\n");
 
-    cod = cod + indice;
-    code = fopen("CadastroCod.txt", "w");
+    fclose(arquivo);
+
+    cod++;
+    code = fopen("C:\\Museu\\Museu\\output\\CadastroCod.txt", "w");
     fprintf(code, "%d", cod);
-    fclose(code); // Fecha o arquivo de código
+    fclose(code);
 }

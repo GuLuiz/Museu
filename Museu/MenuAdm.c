@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "obrasAdm.h"
 #include "MenuAdm.h"
 
@@ -24,6 +25,9 @@ void menuAdm(char login[20], char senha[20]) {
                 break;
             case 1:
                 obrasRetornou = obrasAdm();
+                break;
+            case 2:
+                system ("start C:\\Museu\\Museu\\output\\Questionario.txt" );
                 break;
             // Adicione outros casos conforme necessário
             default:
