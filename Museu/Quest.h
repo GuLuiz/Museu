@@ -3,5 +3,4 @@
 
 void questionarios(int id, int obras);
 
-
-#endif // LOGIN_ADMIN_H
+#endif 
