@@ -2,8 +2,8 @@
 #include <string.h>
 #include "ObrasMenu.h"
 
-
-struct Obra{
+struct Obra
+{
     int ID;
     int notaObra;
     int importanciaObra;
@@ -11,10 +11,11 @@ struct Obra{
     int satisfacaoObra;
 };
 
-void questionarios (int id, int obras){
+void questionarios(int id, int obras)
+{
 
-   FILE *questionario;   
-   struct Obra obra;
+    FILE *questionario;
+    struct Obra obra;
 
     obra.ID = id;
     switch (obras)
@@ -32,7 +33,7 @@ void questionarios (int id, int obras){
         fprintf(questionario, "\nUsuario: %d \n Obra: Nikola Tesla \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;
-        case 2:
+    case 2:
         printf("de uma escala de 0 a 10,qual nota você daria para esta obra?");
         scanf("%d", &obra.notaObra);
         printf("de uma escala de 0 a 10,como voce avalia a importancia desta obra?");
@@ -45,7 +46,7 @@ void questionarios (int id, int obras){
         fprintf(questionario, "\nUsuario: %d \n Obra: O Grito \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;
-        case 3:
+    case 3:
         printf("de uma escala de 0 a 10,qual nota você daria para esta obra?");
         scanf("%d", &obra.notaObra);
         printf("de uma escala de 0 a 10,como voce avalia a importancia desta obra?");
@@ -58,7 +59,7 @@ void questionarios (int id, int obras){
         fprintf(questionario, "\nUsuario: %d \n Obra: Santos Dumont \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;
-        case 4:
+    case 4:
         printf("de uma escala de 0 a 10,qual nota você daria para esta obra?");
         scanf("%d", &obra.notaObra);
         printf("de uma escala de 0 a 10,como voce avalia a importancia desta obra?");
@@ -74,8 +75,4 @@ void questionarios (int id, int obras){
     default:
         break;
     }
-
-
-
-
 }

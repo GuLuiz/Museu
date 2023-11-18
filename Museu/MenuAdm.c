@@ -29,6 +29,9 @@ void menuAdm(char login[20], char senha[20]) {
             case 2:
                 system ("start C:\\Museu\\Museu\\output\\Questionario.txt" );
                 break;
+            case 2:
+                relatorio();
+                break;
             // Adicione outros casos conforme necessário
             default:
                 break;

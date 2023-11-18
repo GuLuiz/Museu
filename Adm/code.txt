@@ -1,0 +1,1 @@
+gcc -o main main.c quest.c MenuAdm.c obrasMenu.c obrasAdm.c menuVisitantes.c bilheteria.c login.c loginAdmin.c  
