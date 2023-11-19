@@ -14,3 +14,19 @@ ENTRADA: Inteira
 EMAIL: adm@gmail.com
 
 ====================================================
+CÓDIGO DE CADASTRO : 2
+====================================================
+NOME: gu
+
+ENTRADA: Inteira
+EMAIL: gu@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 3
+====================================================
+NOME: Gustavo
+
+ENTRADA: Inteira
+EMAIL: Gustaluizgonc@gmail.com
+
+====================================================

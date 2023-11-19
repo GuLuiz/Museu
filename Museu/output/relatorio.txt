@@ -1,0 +1,24 @@
+Relatório para a obra 'O Grito ':
+Média da pergunta 1: 8,75
+Média da pergunta 2: 9,00
+Média da pergunta 3: 9,25
+Média da pergunta 4: 9,50
+
+Relatório para a obra 'Nikola Tesla ':
+Média da pergunta 1: 10,00
+Média da pergunta 2: 7,50
+Média da pergunta 3: 8,00
+Média da pergunta 4: 8,50
+
+Relatório para a obra 'Santos Dumont ':
+Média da pergunta 1: 8,00
+Média da pergunta 2: 7,00
+Média da pergunta 3: 6,00
+Média da pergunta 4: 5,00
+
+Relatório para a obra 'Van Gogh - 100 de arte moderna ':
+Média da pergunta 1: 1,00
+Média da pergunta 2: 2,00
+Média da pergunta 3: 3,00
+Média da pergunta 4: 4,00
+

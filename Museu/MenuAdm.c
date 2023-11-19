@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "obrasAdm.h"
 #include "MenuAdm.h"
+#include "Relatorio.h"
 
 void menuAdm(char login[20], char senha[20]) {
     int sair = 0;
@@ -29,10 +30,10 @@ void menuAdm(char login[20], char senha[20]) {
             case 2:
                 system ("start C:\\Museu\\Museu\\output\\Questionario.txt" );
                 break;
-            case 2:
-                relatorio();
+            case 3:
+                Relatorio();
+                 system ("start C:\\Museu\\Museu\\output\\relatorio.txt" ); 
                 break;
-            // Adicione outros casos conforme necessário
             default:
                 break;
         }
@@ -40,7 +41,7 @@ void menuAdm(char login[20], char senha[20]) {
 
     if (obrasRetornou == 1) {
         printf("\nRetornando ao Menu Administrador...\n");
-        menuAdm(login, senha);  // Chama recursivamente o menuAdm se obrasRetornou for 1
+        menuAdm(login, senha);  
     } else {
         printf("\nLogout do Menu Administrador...\n");
     }
