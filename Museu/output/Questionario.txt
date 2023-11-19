@@ -1,7 +1,0 @@
-
-Usuario: 0 
- Obra: O Grito 
- Notas: 10 10 10 10
-Usuario: 1 
- Obra: O Grito 
- Notas: 10 10 10 10

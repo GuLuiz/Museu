@@ -19,7 +19,6 @@ int cod;
 FILE *arquivo;
 FILE *code;
 
-// Função de cadastro de bilhete
 void bilheteria()
 {
     arquivo = fopen("C:\\Museu\\Museu\\output\\bilhete.txt", "a"); 
