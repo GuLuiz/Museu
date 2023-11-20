@@ -21,7 +21,7 @@ FILE *code;
 
 void bilheteria()
 {
-    arquivo = fopen("C:\\Museu\\Museu\\output\\bilhete.txt", "a"); 
+    arquivo = fopen("C:\\Museu\\Museu\\output\\bilhete.txt", "a");
     code = fopen("C:\\Museu\\Museu\\output\\CadastroCod.txt", "r");
     fscanf(code, "%d", &cod);
 
@@ -30,12 +30,29 @@ void bilheteria()
     printf("==============================================\n");
     printf("             Cadastrando Bilhete \n");
     printf("==============================================\n");
-    printf("\nNOME: ");
-    fflush(stdin);
-    fgets(Pessoas[indice].Name, sizeof(Pessoas[indice].Name), stdin);
+    // validador caso haja caracteres vazias
+    while (1)
+    {
+        printf("\nNOME: ");
+        fflush(stdin);
+        fgets(Pessoas[indice].Name, sizeof(Pessoas[indice].Name), stdin);
+        if (strlen(Pessoas[indice].Name) > 0)
+        {
+            break; // Saia do loop se o nome não estiver vazio
+        }
+    }
+    while (1)
+    {
     printf("\nEMAIL: ");
     fflush(stdin);
     fgets(Pessoas[indice].email, sizeof(Pessoas[indice].email), stdin);
+    
+    if (strlen(Pessoas[indice].email) > 0)
+        {
+            break;
+        }
+    }
+    
 
     while (!(optionTicket == 1 || optionTicket == 2 || optionTicket == 3))
     {

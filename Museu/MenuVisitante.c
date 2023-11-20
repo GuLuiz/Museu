@@ -6,15 +6,11 @@
 
 int MenuVisitante()
 {
-    char resposta;
-    do
-    {
-        bilheteria();
-        printf("Deseja realizar outro Cadastro? (s/n)");
-        scanf(" %c", &resposta);
 
-    } while (resposta == 's' || resposta == 'S');
+    bilheteria();
     
     obras();
+
+    
     return 0;
 }
