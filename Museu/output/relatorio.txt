@@ -1,24 +1,43 @@
-Relatório para a obra 'Nikola Tesla ':
-Média da pergunta 1: 6,00
-Média da pergunta 2: 8,00
-Média da pergunta 3: 4,50
-Média da pergunta 4: 8,00
+===========================================================
+                     Relatório Geral
+===========================================================
+Obra Mais Acessada: Santos Dumont (Total de Acessos: 2)
+Obra Menos Acessada: Nikola Tesla  (Total de Acessos: 1)
+===========================================================
 
-Relatório para a obra 'O Grito ':
-Média da pergunta 1: 10,00
-Média da pergunta 2: 7,50
-Média da pergunta 3: 8,00
-Média da pergunta 4: 8,50
+===========================================================
+  Relatório da obra Santos Dumont                   
+===========================================================
+| Nota        | Média Avaliativa: 9,50   |
+| importancia | Média Avaliativa: 7,00   |
+| informativa | Média Avaliativa: 7,50   |
+| sastifação  | Média Avaliativa: 7,00   |
+===========================================================
 
-Relatório para a obra 'Santos Dumont ':
-Média da pergunta 1: 5,00
-Média da pergunta 2: 6,00
-Média da pergunta 3: 7,50
-Média da pergunta 4: 8,50
+===========================================================
+  Relatório da obra Nikola Tesla                    
+===========================================================
+| Nota        | Média Avaliativa: 10,00  |
+| importancia | Média Avaliativa: 9,00   |
+| informativa | Média Avaliativa: 10,00  |
+| sastifação  | Média Avaliativa: 8,00   |
+===========================================================
 
-Relatório para a obra 'Van Gogh - 100 de arte moderna ':
-Média da pergunta 1: 10,00
-Média da pergunta 2: 10,00
-Média da pergunta 3: 10,00
-Média da pergunta 4: 5,50
+===========================================================
+  Relatório da obra Van Gogh                        
+===========================================================
+| Nota        | Média Avaliativa: 10,00  |
+| importancia | Média Avaliativa: 9,00   |
+| informativa | Média Avaliativa: 10,00  |
+| sastifação  | Média Avaliativa: 8,00   |
+===========================================================
+
+===========================================================
+  Relatório da obra O grito                         
+===========================================================
+| Nota        | Média Avaliativa: 10,00  |
+| importancia | Média Avaliativa: 9,00   |
+| informativa | Média Avaliativa: 10,00  |
+| sastifação  | Média Avaliativa: 8,00   |
+===========================================================
 
