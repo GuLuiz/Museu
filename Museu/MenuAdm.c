@@ -34,12 +34,12 @@ void menuAdm(char login[20], char senha[20])
             obrasRetornou = obrasAdm();
             break;
         case 2:
-            system("start C:\\Museu\\Museu\\output\\Questionario.txt");
+            system("start .\\output\\Questionario.txt");
             break;
         case 3:
             Relatorio();
             system("cls");
-            arquivo = fopen("C:\\Museu\\Museu\\output\\relatorio.txt", "r");
+            arquivo = fopen(".\\output\\relatorio.txt", "r");
             while (fgets(linha, sizeof(linha), arquivo) != NULL)
             {
                 printf("%s", linha);

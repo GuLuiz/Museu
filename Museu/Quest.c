@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "ObrasMenu.h"
 
 struct Obra
@@ -45,7 +46,7 @@ void questionarios(int id, int obras)
             scanf("%d", &obra.satisfacaoObra);
         } while (obra.satisfacaoObra < 0 || obra.satisfacaoObra > 10);
 
-        questionario = fopen("C:\\Museu\\Museu\\output\\Questionario.txt", "a");
+        questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: Nikola Tesla \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;
@@ -74,7 +75,7 @@ void questionarios(int id, int obras)
             scanf("%d", &obra.satisfacaoObra);
         } while (obra.satisfacaoObra < 0 || obra.satisfacaoObra > 10);
 
-        questionario = fopen("C:\\Museu\\Museu\\output\\Questionario.txt", "a");
+        questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: O Grito \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;
@@ -103,7 +104,7 @@ void questionarios(int id, int obras)
             scanf("%d", &obra.satisfacaoObra);
         } while (obra.satisfacaoObra < 0 || obra.satisfacaoObra > 10);
 
-        questionario = fopen("C:\\Museu\\Museu\\output\\Questionario.txt", "a");
+        questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: Santos Dumont \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;
@@ -132,7 +133,7 @@ void questionarios(int id, int obras)
             scanf("%d", &obra.satisfacaoObra);
         } while (obra.satisfacaoObra < 0 || obra.satisfacaoObra > 10);
 
-        questionario = fopen("C:\\Museu\\Museu\\output\\Questionario.txt", "a");
+        questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: Van Gogh - 100 de arte moderna \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
         break;

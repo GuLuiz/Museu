@@ -21,8 +21,8 @@ FILE *code;
 
 void bilheteria()
 {
-    arquivo = fopen("C:\\Museu\\Museu\\output\\bilhete.txt", "a");
-    code = fopen("C:\\Museu\\Museu\\output\\CadastroCod.txt", "r");
+    arquivo = fopen(".\\output\\bilhete.txt", "a");
+    code = fopen(".\\output\\CadastroCod.txt", "r");
     fscanf(code, "%d", &cod);
 
     int optionTicket = 0;
@@ -103,7 +103,7 @@ void bilheteria()
     fclose(arquivo);
 
     cod++;
-    code = fopen("C:\\Museu\\Museu\\output\\CadastroCod.txt", "w");
+    code = fopen(".\\output\\CadastroCod.txt", "w");
     fprintf(code, "%d", cod);
     fclose(code);
 }

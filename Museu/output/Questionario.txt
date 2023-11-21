@@ -1,20 +1,15 @@
-
-Usuario: 2
-Obra: Santos Dumont
-Notas: 10 9 10 8
-
-Usuario: 3
-Obra: Santos Dumont
-Notas: 9 5 5 6
-
 Usuario: 1 
  Obra: Nikola Tesla 
- Notas: 10 9 10 8
-
-Usuario: 3
-Obra: Van Gogh
-Notas: 10 9 10 8
-
-Usuario: 4
-Obra: O grito 
-Notas: 10 9 10 8
+ Notas: 10 10 10 10
+Usuario: 1 
+ Obra: O Grito 
+ Notas: 10 10 10 10
+Usuario: 1 
+ Obra: Santos Dumont 
+ Notas: 10 10 10 10
+Usuario: 1 
+ Obra: Van Gogh - 100 de arte moderna 
+ Notas: 10 10 10 10
+Usuario: 2 
+ Obra: O Grito 
+ Notas: 5 5 5 5

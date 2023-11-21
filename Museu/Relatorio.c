@@ -38,7 +38,7 @@ int Relatorio()
     RespostaUsuario respostas[MAX_USUARIOS];
     RelatorioObra relatorios[MAX_OBRAS];
 
-    FILE *arquivoEntrada = fopen("C:\\Museu\\Museu\\output\\Questionario.txt", "r");
+    FILE *arquivoEntrada = fopen(".\\output\\Questionario.txt", "r");
     if (arquivoEntrada == NULL)
     {
         printf("Erro ao abrir o arquivo de entrada.\n");
@@ -98,7 +98,7 @@ int Relatorio()
         }
     }
 
-    FILE *arquivoSaida = fopen("C:\\Museu\\Museu\\output\\relatorio.txt", "w");
+    FILE *arquivoSaida = fopen(".\\output\\relatorio.txt", "w");
     if (arquivoSaida == NULL)
     {
         printf("Erro ao abrir o arquivo de saída.\n");

@@ -23,7 +23,6 @@ void Login()
             MenuVisitante(); // Chama a função LoginAdmin
             
         }
-        while (decisao != 1 && decisao !=2 );
-            
     }
+        while (decisao != 1 && decisao !=2 );
 }
