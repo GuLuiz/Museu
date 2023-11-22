@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "Relatorio.h"
 
 #define MAX_OBRAS 100
 #define MAX_USUARIOS 100
@@ -107,8 +108,8 @@ int Relatorio()
     fprintf(arquivoSaida, "===========================================================\n");
     fprintf(arquivoSaida, "                     Relatório Geral\n");
     fprintf(arquivoSaida, "===========================================================\n");
-    fprintf(arquivoSaida, "Obra Mais Acessada: %s (Total de Acessos: %d)\n", relatorios[obraMaisAcessadaIndex].obra, relatorios[obraMaisAcessadaIndex].contador);
-    fprintf(arquivoSaida, "Obra Menos Acessada: %s (Total de Acessos: %d)\n", relatorios[obraMenosAcessadaIndex].obra, relatorios[obraMenosAcessadaIndex].contador);
+    fprintf(arquivoSaida, "Obra com Maior Valor: %s (Valor: %d)\n", obraMaiorNome, maiorValor);
+    fprintf(arquivoSaida, "Obra com Menor Valor: %s (Valor: %d)\n", obraMenorNome, menorValor);
     fprintf(arquivoSaida, "===========================================================\n\n");
 
 
