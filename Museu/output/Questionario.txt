@@ -13,3 +13,12 @@ Usuario: 1
 Usuario: 2 
  Obra: O Grito 
  Notas: 5 5 5 5
+Usuario: 1 
+ Obra: Nikola Tesla 
+ Notas: 10 10 10 10
+Usuario: 1 
+ Obra: Nikola Tesla 
+ Notas: 10 10 10 10
+Usuario: 1 
+ Obra: O Grito 
+ Notas: 10 10 10 10

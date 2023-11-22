@@ -102,7 +102,7 @@ void bilheteria()
 
     fclose(arquivo);
 
-    cod++;
+    cod = cod + cod * 8;
     code = fopen(".\\output\\CadastroCod.txt", "w");
     fprintf(code, "%d", cod);
     fclose(code);

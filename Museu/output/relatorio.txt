@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
 ===========================================================
                      Relatório Geral
 ===========================================================
-Obra Mais Acessada: Nikola Tesla  (Total de Acessos: 1)
-Obra Menos Acessada: Nikola Tesla  (Total de Acessos: 1)
+Obra Mais Acessada: Nikola Tesla  (Total de Acessos: 3)
+Obra Menos Acessada: Nikola Tesla  (Total de Acessos: 3)
 ===========================================================
 
 ===========================================================
@@ -19,10 +17,10 @@ Obra Menos Acessada: Nikola Tesla  (Total de Acessos: 1)
 ===========================================================
   Relatório da obra O Grito                         
 ===========================================================
-| Nota        | Média Avaliativa: 7.50   |
-| importancia | Média Avaliativa: 7.50   |
-| informativa | Média Avaliativa: 7.50   |
-| sastifação  | Média Avaliativa: 7.50   |
+| Nota        | Média Avaliativa: 8.33   |
+| importancia | Média Avaliativa: 8.33   |
+| informativa | Média Avaliativa: 8.33   |
+| sastifação  | Média Avaliativa: 8.33   |
 ===========================================================
 
 ===========================================================
@@ -43,4 +41,3 @@ Obra Menos Acessada: Nikola Tesla  (Total de Acessos: 1)
 | sastifação  | Média Avaliativa: 10.00  |
 ===========================================================
 
->>>>>>> 9be3db74565af2a88af98d84e7157557158a36f4

@@ -1,9 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>  
 #include "obrasAdm.h"
 #include "MenuAdm.h"
+void ocultar_senha(char senha[]) {
+    int i = 0;
+    char c;
 
+    while (1) {
+        c = getch();
+
+        if (c == 13) {  // Se a tecla Enter for pressionada
+            senha[i] = '\0';
+            break;
+        } else if (c == 8 && i > 0) {  // Se a tecla Backspace for pressionada
+            printf("\b \b");  // Apaga o caractere da tela
+            i--;
+        } else if (c >= 32 && c <= 126) {  // Se o caractere for imprimível
+            printf("*");
+            senha[i] = c;
+            i++;
+        }
+    }
+}
 int LoginAdmin()
 {
     char loginAdmin[20];
@@ -40,9 +60,9 @@ int LoginAdmin()
             printf("\nLOGIN ADMINISTRADOR");
             printf("\nLogin: ");
             scanf(" %s", login);
-            printf("\nSenha: ");
-            scanf(" %s", senha);
-            printf("***********************************************\n");
+            printf("Digite a senha: ");
+            ocultar_senha(senha);
+            printf("\n***********************************************\n");
 
             if (strcmp(login, loginAdmin) == 0 && strcmp(senha, senhaAdmin) == 0)
             {
