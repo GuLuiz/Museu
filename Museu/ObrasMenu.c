@@ -39,7 +39,7 @@ void obras()
     printf("Por favor, digite o ID conforme seu bilhete: ");
     scanf("%d", &idDesejado);
 
-    arquivo2 = fopen("C:\\Museu\\Museu\\output\\Bilhete.txt", "r");
+    arquivo2 = fopen(".\\output\\Bilhete.txt", "r");
     if (arquivo2 == NULL)
     {
         printf("Erro ao abrir o arquivo de bilhetes.\n");
@@ -99,7 +99,7 @@ void obras()
             break;
 
         case 1:
-            system("start C:\\Museu\\Obras\\NikolaTesla.png");
+            system("start ..\\Obras\\NikolaTesla.png");
 
             printf("Gostaria de responder nosso questionário relacionado à obra? (s/n)");
             scanf(" %c", &res);
@@ -110,7 +110,7 @@ void obras()
             break;
 
         case 2:
-            system("start C:\\Museu\\Obras\\OGrito.png");
+            system("start ..\\Obras\\OGrito.png");
             printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
             scanf(" %c", &res);
             if (res == 's')
@@ -120,7 +120,7 @@ void obras()
             break;
 
         case 3:
-            system("start C:\\Museu\\Obras\\SantosDumont.png");
+            system("start ..\\Obras\\SantosDumont.png");
             printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
             scanf(" %c", &res);
             if (res == 's')
@@ -130,7 +130,7 @@ void obras()
             break;
 
         case 4:
-            system("start C:\\Museu\\Obras\\VanGogh.png");
+            system("start ..\\Obras\\VanGogh.png");
             printf("Gostaria de responder nosso questionário relacionado a obra? (s/n)");
             scanf(" %c", &res);
             if (res == 's')

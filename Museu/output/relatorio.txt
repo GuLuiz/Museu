@@ -1,0 +1,46 @@
+<<<<<<< HEAD
+=======
+===========================================================
+                     Relatório Geral
+===========================================================
+Obra Mais Acessada: Nikola Tesla  (Total de Acessos: 1)
+Obra Menos Acessada: Nikola Tesla  (Total de Acessos: 1)
+===========================================================
+
+===========================================================
+  Relatório da obra Nikola Tesla                    
+===========================================================
+| Nota        | Média Avaliativa: 10.00  |
+| importancia | Média Avaliativa: 10.00  |
+| informativa | Média Avaliativa: 10.00  |
+| sastifação  | Média Avaliativa: 10.00  |
+===========================================================
+
+===========================================================
+  Relatório da obra O Grito                         
+===========================================================
+| Nota        | Média Avaliativa: 7.50   |
+| importancia | Média Avaliativa: 7.50   |
+| informativa | Média Avaliativa: 7.50   |
+| sastifação  | Média Avaliativa: 7.50   |
+===========================================================
+
+===========================================================
+  Relatório da obra Santos Dumont                   
+===========================================================
+| Nota        | Média Avaliativa: 10.00  |
+| importancia | Média Avaliativa: 10.00  |
+| informativa | Média Avaliativa: 10.00  |
+| sastifação  | Média Avaliativa: 10.00  |
+===========================================================
+
+===========================================================
+  Relatório da obra Van Gogh - 100 de arte moderna   
+===========================================================
+| Nota        | Média Avaliativa: 10.00  |
+| importancia | Média Avaliativa: 10.00  |
+| informativa | Média Avaliativa: 10.00  |
+| sastifação  | Média Avaliativa: 10.00  |
+===========================================================
+
+>>>>>>> 9be3db74565af2a88af98d84e7157557158a36f4

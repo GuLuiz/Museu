@@ -28,16 +28,16 @@ int obrasAdm()
             break;
 
         case 1:
-            system("start C:\\Museu\\Obras\\NikolaTesla.png");
+            system("start ..\\Obras\\NikolaTesla.png");
             break;
         case 2:
-            system("start C:\\Museu\\Obras\\OGrito.png");
+            system("start ..\\Obras\\OGrito.png");
             break;
         case 3:
-            system("start C:\\Museu\\Obras\\SantosDumont.png");
+            system("start ..\\Obras\\SantosDumont.png");
             break;
         case 4:
-            system("start C:\\Museu\\Obras\\VanGogh.png");
+            system("start ..\\Obras\\VanGogh.png");
             break;
 
         default:
