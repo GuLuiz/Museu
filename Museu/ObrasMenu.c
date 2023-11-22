@@ -2,69 +2,44 @@
 #include <stdio.h>
 #include <string.h>
 #include "Quest.h"
-#include <stdbool.h>
 
-void removeNewline(char *str)
+void procurarID(int idDesejado)
 {
-    size_t len = strlen(str);
-    if (len > 0 && str[len - 1] == '\n')
-    {
-        str[len - 1] = '\0'; // Substitui o '\n' por '\0'
-    }
-}
+    FILE *arquivo = fopen(".\\output\\bilhete.txt", "r");
 
-bool contemDigito(int numero, int digito)
-{
-    char strNumero[20];
-    sprintf(strNumero, "%d", numero);
-
-    for (size_t i = 0; i < strlen(strNumero); i++)
-    {
-        if (strNumero[i] - '0' == digito)
-        {
-            return true;
-        }
-    }
-    return false;
-}
-
-void obras()
-{
-    int idDesejado;
-    int codigo;
-    FILE *arquivo2;
-    int define;
-    int sair = 0;
-
-    printf("Por favor, digite o ID conforme seu bilhete: ");
-    scanf("%d", &idDesejado);
-
-    arquivo2 = fopen(".\\output\\Bilhete.txt", "r");
-    if (arquivo2 == NULL)
+    if (arquivo == NULL)
     {
         printf("Erro ao abrir o arquivo de bilhetes.\n");
         return;
     }
 
-    int encontrado = 0;
-    char linha[100];
+    int encontrado = 0; // Flag para indicar se o dígito foi encontrado em algum ID
 
-    while (fgets(linha, sizeof(linha), arquivo2) != NULL)
+    char linha[255];
+    int codigoLido;
+
+    while (fgets(linha, sizeof(linha), arquivo) != NULL)
     {
-        removeNewline(linha);
-
-        if (sscanf(linha, "CÓDIGO DE CADASTRO : %d", &codigo) == 1 ||
-            sscanf(linha, "CÓDIGO DE CADASTRO :%d", &codigo) == 1)
+        if (sscanf(linha, "CÓDIGO DE CADASTRO : %d", &codigoLido) == 1)
         {
-            if (contemDigito(codigo, idDesejado))
+            if (codigoLido == idDesejado)
             {
                 encontrado = 1;
+                printf("Bilhete encontrado!\n\n");
+                printf("%s", linha); // Imprime a linha com o código
+
+                // Leia e imprima as linhas seguintes que contêm as informações do bilhete
+                for (int i = 0; i < 4; i++)
+                {
+                    fgets(linha, sizeof(linha), arquivo);
+                    printf("%s", linha);
+                }
                 break;
             }
         }
     }
 
-    fclose(arquivo2);
+    fclose(arquivo);
 
     if (encontrado)
     {
@@ -73,8 +48,43 @@ void obras()
     else
     {
         printf("Dígito %d não encontrado em nenhum ID.\n", idDesejado);
-        return; // Se não encontrar o ID, não faz sentido continuar
+        return;
     }
+}
+
+void obras()
+{
+    FILE *Tesla;
+    FILE *vangogh;
+    FILE *Grito;
+    FILE *Santos;
+    int contadorTesla = 0;
+    int contadorVan = 0;
+    int contadorGrito = 0;
+    int contadorSantos = 0;
+    Tesla = fopen(".\\LoginAdm\\coutOBRAS\\tesla.txt", "r");
+    vangogh = fopen(".\\LoginAdm\\coutOBRAS\\vangogh.txt", "r");
+    Grito = fopen(".\\LoginAdm\\coutOBRAS\\grito.txt", "r");
+    Santos = fopen(".\\LoginAdm\\coutOBRAS\\santosDumont.txt", "r");
+    fscanf(Tesla, "%d", &contadorTesla);
+    fscanf(Grito, "%d", &contadorGrito);
+    fscanf(vangogh, "%d", &contadorVan);
+    fscanf(Santos, "%d", &contadorSantos);
+    fclose(Tesla);
+    fclose(vangogh);
+    fclose(Grito);
+    fclose(Santos);
+
+    int idDesejado;
+    int codigo;
+    FILE *arquivo2;
+    int define;
+    int sair = 0;
+    char res;
+
+    printf("Por favor, digite o ID conforme seu bilhete: ");
+    scanf("%d", &idDesejado);
+    procurarID(idDesejado);
 
     while (sair == 0)
     {
@@ -89,7 +99,6 @@ void obras()
         printf("0 - Sair\n");
         printf("Escolha a obra desejada: ");
         scanf("%d", &define);
-        char res;
 
         switch (define)
         {
@@ -107,6 +116,7 @@ void obras()
             {
                 questionarios(idDesejado, 1);
             }
+            contadorTesla += 1;
             break;
 
         case 2:
@@ -117,6 +127,7 @@ void obras()
             {
                 questionarios(idDesejado, 2);
             }
+            contadorGrito += 1;
             break;
 
         case 3:
@@ -127,6 +138,7 @@ void obras()
             {
                 questionarios(idDesejado, 3);
             }
+            contadorSantos += 1;
             break;
 
         case 4:
@@ -137,11 +149,24 @@ void obras()
             {
                 questionarios(idDesejado, 4);
             }
+            contadorVan += 1;
             break;
 
         default:
             printf("Opção inválida. Tente novamente.\n");
             break;
         }
+        Tesla = fopen(".\\LoginAdm\\coutOBRAS\\tesla.txt", "w");
+        vangogh = fopen(".\\LoginAdm\\coutOBRAS\\vangogh.txt", "w");
+        Grito = fopen(".\\LoginAdm\\coutOBRAS\\grito.txt", "w");
+        Santos = fopen(".\\LoginAdm\\coutOBRAS\\santosDumont.txt", "w");
+        fprintf(Tesla, "%d", contadorTesla);
+        fprintf(Grito, "%d", contadorGrito);
+        fprintf(vangogh, "%d", contadorVan);
+        fprintf(Santos, "%d", contadorSantos);
+        fclose(Tesla);
+        fclose(vangogh);
+        fclose(Grito);
+        fclose(Santos);
     }
 }

@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <ctype.h>
 #include <string.h>
+#include <time.h>
 
 struct Bilhete
 {
@@ -14,22 +15,38 @@ struct Bilhete
 
 struct Bilhete Pessoas[100];
 int indice = 0;
-int cod;
 
 FILE *arquivo;
 FILE *code;
+// Função para gerar um ID único e não previsível
+unsigned int gerarID() {
+    // Obtém o timestamp atual
+    time_t tempoAtual;
+    time(&tempoAtual);
 
+    // Gera um componente aleatório de 16 bits
+    srand((unsigned int)time(NULL));
+    unsigned int componenteAleatorio = rand() & 0xFFFF;
+
+    // Combina o timestamp com o componente aleatório para criar o ID
+    unsigned int id = ((unsigned int)tempoAtual << 16) | componenteAleatorio;
+
+    return id;
+}
 void bilheteria()
 {
+    // Geração do código antes do incremento do índice
+    // semente da função rand()
+    srand((unsigned int)time(NULL));
+    int cod = gerarID();
     arquivo = fopen(".\\output\\bilhete.txt", "a");
-    code = fopen(".\\output\\CadastroCod.txt", "r");
-    fscanf(code, "%d", &cod);
 
     int optionTicket = 0;
     system("cls");
     printf("==============================================\n");
     printf("             Cadastrando Bilhete \n");
     printf("==============================================\n");
+
     // validador caso haja caracteres vazias
     while (1)
     {
@@ -43,15 +60,16 @@ void bilheteria()
     }
     while (1)
     {
-    printf("\nEMAIL: ");
-    fflush(stdin);
-    fgets(Pessoas[indice].email, sizeof(Pessoas[indice].email), stdin);
-    
-    if (strlen(Pessoas[indice].email) > 0)
+        printf("\nEMAIL: ");
+        fflush(stdin);
+        fgets(Pessoas[indice].email, sizeof(Pessoas[indice].email), stdin);
+
+        if (strlen(Pessoas[indice].email) > 0)
         {
             break;
         }
     }
+
     
 
     while (!(optionTicket == 1 || optionTicket == 2 || optionTicket == 3))
@@ -82,16 +100,18 @@ void bilheteria()
 
     Pessoas[indice].ID = cod;
 
+    // Incremento do índice após a utilização do código
+    indice++;
+
     system("cls");
     printf("==============================================\n");
     printf("             Bilhete Cadastrado \n");
     printf("==============================================\n");
-    printf("ID: %d\n", Pessoas[indice].ID);
-    printf("NOME: %s", Pessoas[indice].Name);
-    printf("ENTRADA: %s\n", Pessoas[indice].entrada);
-    printf("EMAIL: %s\n", Pessoas[indice].email);
+    printf("ID: %d\n", Pessoas[indice - 1].ID);
+    printf("NOME: %s", Pessoas[indice - 1].Name);
+    printf("ENTRADA: %s\n", Pessoas[indice - 1].entrada);
+    printf("EMAIL: %s\n", Pessoas[indice - 1].email);
     printf("==============================================\n");
-    indice++;
 
     fprintf(arquivo, "CÓDIGO DE CADASTRO : %d\n", cod);
     fprintf(arquivo, "====================================================\n");
@@ -101,9 +121,4 @@ void bilheteria()
     fprintf(arquivo, "\n====================================================\n");
 
     fclose(arquivo);
-
-    cod = cod + cod * 8;
-    code = fopen(".\\output\\CadastroCod.txt", "w");
-    fprintf(code, "%d", cod);
-    fclose(code);
 }
