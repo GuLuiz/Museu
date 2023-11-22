@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Relatorio.h"
 
 #define MAX_OBRAS 100
 #define MAX_USUARIOS 100
@@ -20,18 +19,76 @@ typedef struct
     int contador;
 } RelatorioObra;
 
-double calcularMedia(int notas[], int tamanho)
-{
-    if (tamanho == 0)
-        return 0;
+int maiorValor, menorValor;
+char obraMaiorNome[50], obraMenorNome[50];
 
-    int soma = 0;
-    for (int i = 0; i < tamanho; ++i)
+void obterNomeObra(int valor, char nomeObra[])
+{
+    const char *nomes[] = {"Tesla", "Van Gogh", "O Grito", "Santos Dumont", "Desconhecido"};
+    if (valor >= 0 && valor <= 3)
     {
-        soma += notas[i];
+        strcpy(nomeObra, nomes[valor]);
+    }
+    else
+    {
+        strcpy(nomeObra, nomes[4]);
+    }
+}
+
+void encontrarMaiorMenorValor(int valores[], int *maior, int *menor, char *nomeMaior, char *nomeMenor)
+{
+    int tempMaiorValor = valores[0];
+    int tempObraMaiorValor = 0;
+
+    int tempMenorValor = valores[0];
+    int tempObraMenorValor = 0;
+
+    for (int i = 1; i < 4; ++i)
+    {
+        if (valores[i] > tempMaiorValor)
+        {
+            tempMaiorValor = valores[i];
+            tempObraMaiorValor = i;
+        }
+
+        if (valores[i] < tempMenorValor)
+        {
+            tempMenorValor = valores[i];
+            tempObraMenorValor = i;
+        }
     }
 
-    return (double)soma / tamanho;
+    obterNomeObra(tempObraMaiorValor, nomeMaior);
+    obterNomeObra(tempObraMenorValor, nomeMenor);
+
+    *maior = tempMaiorValor;
+    *menor = tempMenorValor;
+}
+
+int calcObras(int *maiorValor, int *menorValor, char *obraMaiornome, char *obraMenornome)
+{
+    int contadorObras[4] = {0}; // Índice 0: Tesla, 1: Van Gogh, 2: O Grito, 3: Santos Dumont
+
+    FILE *arquivos[4];
+    const char *nomesArquivos[] = {".\\output\\tesla.txt", ".\\output\\vangogh.txt", ".\\output\\grito.txt", ".\\output\\santosDumont.txt"};
+
+    for (int i = 0; i < 4; ++i)
+    {
+        arquivos[i] = fopen(nomesArquivos[i], "r");
+        if (arquivos[i] == NULL)
+        {
+            printf("Erro ao abrir um dos arquivos de contagem de obras.\n");
+            return 1;
+        }
+
+        fscanf(arquivos[i], "%d", &contadorObras[i]);
+
+        fclose(arquivos[i]);
+    }
+
+    encontrarMaiorMenorValor(contadorObras, maiorValor, menorValor, obraMaiornome, obraMenornome);
+
+    return 0;
 }
 
 int Relatorio()
@@ -98,6 +155,7 @@ int Relatorio()
                 obraMenosAcessadaIndex = numRelatorios - 1;
         }
     }
+    calcObras(&maiorValor, &menorValor, obraMaiorNome, obraMenorNome);
 
     FILE *arquivoSaida = fopen(".\\output\\relatorio.txt", "w");
     if (arquivoSaida == NULL)
@@ -111,7 +169,6 @@ int Relatorio()
     fprintf(arquivoSaida, "Obra com Maior Valor: %s (Valor: %d)\n", obraMaiorNome, maiorValor);
     fprintf(arquivoSaida, "Obra com Menor Valor: %s (Valor: %d)\n", obraMenorNome, menorValor);
     fprintf(arquivoSaida, "===========================================================\n\n");
-
 
     for (int i = 0; i < numRelatorios; ++i)
     {
