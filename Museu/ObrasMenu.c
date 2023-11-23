@@ -156,10 +156,10 @@ void obras()
             printf("Opção inválida. Tente novamente.\n");
             break;
         }
-        Tesla = fopen(".\\LoginAdm\\coutOBRAS\\tesla.txt", "w");
-        vangogh = fopen(".\\LoginAdm\\coutOBRAS\\vangogh.txt", "w");
-        Grito = fopen(".\\LoginAdm\\coutOBRAS\\grito.txt", "w");
-        Santos = fopen(".\\LoginAdm\\coutOBRAS\\santosDumont.txt", "w");
+        Tesla = fopen(".\\output\\tesla.txt", "w");
+        vangogh = fopen(".\\output\\vangogh.txt", "w");
+        Grito = fopen(".\\output\\grito.txt", "w");
+        Santos = fopen(".\\output\\santosDumont.txt", "w");
         fprintf(Tesla, "%d", contadorTesla);
         fprintf(Grito, "%d", contadorGrito);
         fprintf(vangogh, "%d", contadorVan);
