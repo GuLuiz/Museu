@@ -157,6 +157,7 @@ int Relatorio()
     }
     calcObras(&maiorValor, &menorValor, obraMaiorNome, obraMenorNome);
 
+    system("start .\\output\\relatorio.txt");
     FILE *arquivoSaida = fopen(".\\output\\relatorio.txt", "w");
     if (arquivoSaida == NULL)
     {
@@ -191,6 +192,7 @@ int Relatorio()
 
         fprintf(arquivoSaida, "===========================================================\n\n");
     }
+    
     fclose(arquivoSaida);
 
     return 0;

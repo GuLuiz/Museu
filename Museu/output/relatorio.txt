@@ -1,8 +1,8 @@
 ===========================================================
                      Relatório Geral
 ===========================================================
-Obra com Maior Valor: Santos Dumont (Valor: 10)
-Obra com Menor Valor: Tesla (Valor: 4)
+Obra com Maior Valor: Tesla (Valor: 5)
+Obra com Menor Valor: O Grito (Valor: 1)
 ===========================================================
 
 ===========================================================
