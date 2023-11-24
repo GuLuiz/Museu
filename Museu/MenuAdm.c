@@ -3,7 +3,7 @@
 #include "obrasAdm.h"
 #include "MenuAdm.h"
 #include "Relatorio.h"
-
+#include "backup.h"
 
 void menuAdm(char login[20], char senha[20])
 {
@@ -17,9 +17,10 @@ void menuAdm(char login[20], char senha[20])
         printf("\n***********************************************");
         printf("\nMENU ADMINISTRADOR");
         printf("\n***********************************************\n");
-        printf("1 - Visualizar obras");
-        printf("\n2 - Visualizar questionários");
-        printf("\n3 - Gerar relatórios\n");
+        printf("1 - Visualizar obras\n");
+        printf("2 - Visualizar BIlhetes\n");
+        printf("3 - Gerar relatórios\n");
+        printf("4 - Fazer Backup dos dados\n");
         printf("0 - Sair\n");
 
         int deciMenuAdm;
@@ -34,7 +35,7 @@ void menuAdm(char login[20], char senha[20])
             obrasRetornou = obrasAdm();
             break;
         case 2:
-            system("start .\\output\\Questionario.txt");
+            system("start .\\output\\Bilhete.txt");
             break;
         case 3:
             Relatorio();
@@ -46,6 +47,10 @@ void menuAdm(char login[20], char senha[20])
             }
             system("pause");
             fclose(arquivo);
+            break;
+        case 4:
+            criarBackup(".\\output\\relatorio.txt", "..\\Adm\\relatorio_backup.txt");
+            criarBackup(".\\output\\Bilhete.txt", "..\\Adm\\bilhete_backup.txt");
             break;
         default:
             break;
