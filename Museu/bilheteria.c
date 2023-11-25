@@ -33,6 +33,7 @@ unsigned int gerarID() {
 
     return id;
 }
+// Função que ira jogar os dados do usuario na struct bilhete
 void bilheteria()
 {
     // Geração do código antes do incremento do índice
