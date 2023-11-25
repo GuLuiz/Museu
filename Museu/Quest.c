@@ -140,10 +140,4 @@ void questionarios(int id, int obras)
     default:
         break;
     }
-
-    system("cls");
-    printf("\n**************************************\n");
-    printf("*   MUITO OBRIGADO POR VISITAR      *\n");
-    printf("*           NOSSO MUSEU!            *\n");
-    printf("**************************************\n");
 }

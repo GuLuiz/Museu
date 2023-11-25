@@ -43,11 +43,11 @@ void procurarID(int idDesejado)
 
     if (encontrado)
     {
-        printf("Dígito %d encontrado em algum ID.\n", idDesejado);
+        printf("ID %d encontrado em algum ID.\n", idDesejado);
     }
     else
     {
-        printf("Dígito %d não encontrado em nenhum ID.\n", idDesejado);
+        printf("ID %d não encontrado em nenhum ID.\n", idDesejado);
         return;
     }
 }
@@ -169,4 +169,10 @@ void obras()
         fclose(Grito);
         fclose(Santos);
     }
+
+    system("cls");
+    printf("\n**************************************\n");
+    printf("*   MUITO OBRIGADO POR VISITAR      *\n");
+    printf("*           NOSSO MUSEU!            *\n");
+    printf("**************************************\n");
 }
