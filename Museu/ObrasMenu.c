@@ -3,21 +3,20 @@
 #include <string.h>
 #include "Quest.h"
 
-void procurarID(int idDesejado)
+int procurarID(int idDesejado)
 {
     FILE *arquivo = fopen(".\\output\\bilhete.txt", "r");
 
     if (arquivo == NULL)
     {
         printf("Erro ao abrir o arquivo de bilhetes.\n");
-        return;
+        return 0;
     }
 
     int encontrado = 0; // Flag para indicar se o dígito foi encontrado em algum ID
 
     char linha[255];
     int codigoLido;
-
     while (fgets(linha, sizeof(linha), arquivo) != NULL)
     {
         if (sscanf(linha, "CÓDIGO DE CADASTRO : %d", &codigoLido) == 1)
@@ -39,21 +38,25 @@ void procurarID(int idDesejado)
         }
     }
 
+    system("cls");
     fclose(arquivo);
 
     if (encontrado)
     {
         printf("ID %d encontrado em algum ID.\n", idDesejado);
+        return 1;
     }
     else
     {
         printf("ID %d não encontrado em nenhum ID.\n", idDesejado);
-        return;
+        system("pause");
+        return 0;
     }
 }
 
 void obras()
 {
+
     FILE *Tesla;
     FILE *vangogh;
     FILE *Grito;
@@ -62,10 +65,10 @@ void obras()
     int contadorVan = 0;
     int contadorGrito = 0;
     int contadorSantos = 0;
-    Tesla = fopen(".\\LoginAdm\\coutOBRAS\\tesla.txt", "r");
-    vangogh = fopen(".\\LoginAdm\\coutOBRAS\\vangogh.txt", "r");
-    Grito = fopen(".\\LoginAdm\\coutOBRAS\\grito.txt", "r");
-    Santos = fopen(".\\LoginAdm\\coutOBRAS\\santosDumont.txt", "r");
+    Tesla = fopen(".\\output\\tesla.txt", "r");
+    vangogh = fopen(".\\output\\vangogh.txt", "r");
+    Grito = fopen(".\\output\\grito.txt", "r");
+    Santos = fopen(".\\output\\santosDumont.txt", "r");
     fscanf(Tesla, "%d", &contadorTesla);
     fscanf(Grito, "%d", &contadorGrito);
     fscanf(vangogh, "%d", &contadorVan);
@@ -81,10 +84,14 @@ void obras()
     int define;
     int sair = 0;
     char res;
+    int encontrado = 0;
 
-    printf("Por favor, digite o ID conforme seu bilhete: ");
-    scanf("%d", &idDesejado);
-    procurarID(idDesejado);
+    do
+    {
+        printf("Por favor, digite o ID conforme seu bilhete: ");
+        scanf("%d", &idDesejado);
+        encontrado = procurarID(idDesejado);
+    } while (encontrado == 0);
 
     while (sair == 0)
     {

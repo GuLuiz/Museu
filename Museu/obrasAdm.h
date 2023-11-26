@@ -5,4 +5,4 @@
 
 int obrasAdm();
 
-#endif // LOGIN_ADMIN_H
+#endif 

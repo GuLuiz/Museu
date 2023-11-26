@@ -32,5 +32,4 @@ void criarBackup(const char *origem, const char *destino)
     fclose(destinoArquivo);
 
     printf("Backup criado com sucesso!\n");
-    system("pause");
 }

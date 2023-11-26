@@ -49,6 +49,7 @@ void questionarios(int id, int obras)
         questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: Nikola Tesla \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
+        system("cls");
         break;
     case 2:
         do
@@ -78,6 +79,7 @@ void questionarios(int id, int obras)
         questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: O Grito \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
+        system("cls");
         break;
     case 3:
         do
@@ -107,6 +109,7 @@ void questionarios(int id, int obras)
         questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: Santos Dumont \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
+        system("cls");
         break;
     case 4:
         do
@@ -136,6 +139,7 @@ void questionarios(int id, int obras)
         questionario = fopen(".\\output\\Questionario.txt", "a");
         fprintf(questionario, "\nUsuario: %d \n Obra: Van Gogh - 100 de arte moderna \n Notas: %d %d %d %d", obra.ID, obra.notaObra, obra.importanciaObra, obra.informativoObra, obra.satisfacaoObra);
         fclose(questionario);
+        system("cls");
         break;
     default:
         break;

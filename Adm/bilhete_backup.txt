@@ -1,42 +1,26 @@
-Backup gerado em 23/11/23 21:42
+Backup gerado em 26/11/23 11:35
 
-
+CÓDIGO DE CADASTRO : -2079062192
 ====================================================
-CÓDIGO DE CADASTRO : 153839100S
-====================================================
-NOME: nic
-ENTRADA: Inteira
-EMAIL: nic
-
-====================================================
-CÓDIGO DE CADASTRO : 919894808
-====================================================
-NOME: nic
-ENTRADA: Inteira
-EMAIL: nic@gmial.com
-
-====================================================
-CÓDIGO DE CADASTRO : 1230583698
-====================================================
-NOME: nic
+NOME: Gustavo
 
 ENTRADA: Meia
-EMAIL: nic@gmail.com
+EMAIL: gu@gmail.com
 
 ====================================================
-CÓDIGO DE CADASTRO : 1234450515
+CÓDIGO DE CADASTRO : -2075916307
 ====================================================
-NOME: nic
-
-ENTRADA: Inteira
-EMAIL: nic
-
-====================================================
-CÓDIGO DE CADASTRO : 1238776106
-====================================================
-NOME: nic
+NOME: caio
 
 ENTRADA: Inteira
-EMAIL: nic
+EMAIL: caio@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : -2041311575
+====================================================
+NOME: Roberto
+
+ENTRADA: Isenta
+EMAIL: cordeiro@gmail.com
 
 ====================================================

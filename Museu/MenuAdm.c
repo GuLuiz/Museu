@@ -14,6 +14,8 @@ void menuAdm(char login[20], char senha[20])
 
     while (!sair)
     {
+        system("pause");
+        system("cls");
         printf("\n***********************************************");
         printf("\nMENU ADMINISTRADOR");
         printf("\n***********************************************\n");
@@ -45,7 +47,6 @@ void menuAdm(char login[20], char senha[20])
             {
                 printf("%s", linha);
             }
-            system("pause");
             fclose(arquivo);
             break;
         case 4:

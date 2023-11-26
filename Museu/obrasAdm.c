@@ -8,7 +8,7 @@ int obrasAdm()
 
     while (sair == 0)
     {
-        //system("cls");
+        system("cls");
         printf("\n***********************************************");
         printf("\n                  OBRAS");
         printf("\n***********************************************\n");

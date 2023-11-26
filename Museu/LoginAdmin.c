@@ -66,6 +66,7 @@ int LoginAdmin()
 
             if (strcmp(login, loginAdmin) == 0 && strcmp(senha, senhaAdmin) == 0)
             {
+                system("cls");
                 printf("Login realizado com sucesso!\n");
                 logado = 1;
                 menuAdm(login, senha);

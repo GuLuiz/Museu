@@ -113,6 +113,8 @@ void bilheteria()
     printf("ENTRADA: %s\n", Pessoas[indice - 1].entrada);
     printf("EMAIL: %s\n", Pessoas[indice - 1].email);
     printf("==============================================\n");
+    printf("\n");
+    printf("OBS: GUARDE O NUMERO DO ID PARA O USAR FUTURAMENTE\n");
 
     fprintf(arquivo, "CÓDIGO DE CADASTRO : %d\n", cod);
     fprintf(arquivo, "====================================================\n");
