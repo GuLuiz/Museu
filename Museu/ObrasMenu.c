@@ -182,4 +182,5 @@ void obras()
     printf("*   MUITO OBRIGADO POR VISITAR      *\n");
     printf("*           NOSSO MUSEU!            *\n");
     printf("**************************************\n");
+    system("pause");
 }

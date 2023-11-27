@@ -1,26 +1,50 @@
-Backup gerado em 26/11/23 11:35
+Backup gerado em 27/11/23 00:00
 
-CÓDIGO DE CADASTRO : -2079062192
-====================================================
-NOME: Gustavo
-
-ENTRADA: Meia
-EMAIL: gu@gmail.com
-
-====================================================
-CÓDIGO DE CADASTRO : -2075916307
-====================================================
-NOME: caio
-
-ENTRADA: Inteira
-EMAIL: caio@gmail.com
-
-====================================================
-CÓDIGO DE CADASTRO : -2041311575
+CÓDIGO DE CADASTRO : 2060004596
 ====================================================
 NOME: Roberto
 
 ENTRADA: Isenta
 EMAIL: cordeiro@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 2068459161
+====================================================
+NOME: Roberto
+
+ENTRADA: Isenta
+EMAIL: cordeiro@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : 2071736125
+====================================================
+NOME: Roberto
+
+ENTRADA: Isenta
+EMAIL: cordeiro@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : -753250980
+====================================================
+NOME: Roberto
+
+ENTRADA: Isenta
+EMAIL: cordeiro@gmail.com
+
+====================================================
+CÓDIGO DE CADASTRO : -315546994
+====================================================
+NOME: ahaha
+
+ENTRADA: Isenta
+EMAIL: ahaha
+
+====================================================
+CÓDIGO DE CADASTRO : 96039594
+====================================================
+NOME: Eduarda
+
+ENTRADA: Isenta
+EMAIL: dada
 
 ====================================================

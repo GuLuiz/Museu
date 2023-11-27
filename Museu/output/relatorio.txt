@@ -1,43 +1,16 @@
 ===========================================================
                      Relatório Geral
 ===========================================================
-Obra com Maior Valor: Tesla (Valor: 3)
-Obra com Menor Valor: Van Gogh (Valor: 2)
-===========================================================
-
-===========================================================
-  Relatório da obra Nikola Tesla                    
-===========================================================
-| Nota        | Média Avaliativa: 10.00  |
-| importancia | Média Avaliativa: 5.00   |
-| informativa | Média Avaliativa: 6.00   |
-| sastifação  | Média Avaliativa: 8.00   |
-===========================================================
-
-===========================================================
-  Relatório da obra O Grito                         
-===========================================================
-| Nota        | Média Avaliativa: 10.00  |
-| importancia | Média Avaliativa: 5.00   |
-| informativa | Média Avaliativa: 6.00   |
-| sastifação  | Média Avaliativa: 8.00   |
-===========================================================
-
-===========================================================
-  Relatório da obra Santos Dumont                   
-===========================================================
-| Nota        | Média Avaliativa: 10.00  |
-| importancia | Média Avaliativa: 7.50   |
-| informativa | Média Avaliativa: 5.50   |
-| sastifação  | Média Avaliativa: 7.00   |
+Obra com Maior Valor: Van Gogh (Valor: 3)
+Obra com Menor Valor: Tesla (Valor: 0)
 ===========================================================
 
 ===========================================================
   Relatório da obra Van Gogh - 100 de arte moderna   
 ===========================================================
 | Nota        | Média Avaliativa: 10.00  |
-| importancia | Média Avaliativa: 7.50   |
-| informativa | Média Avaliativa: 8.00   |
-| sastifação  | Média Avaliativa: 10.00  |
+| importancia | Média Avaliativa: 5.00   |
+| informativa | Média Avaliativa: 4.50   |
+| sastifação  | Média Avaliativa: 9.00   |
 ===========================================================
 
