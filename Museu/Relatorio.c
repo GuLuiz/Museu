@@ -22,6 +22,7 @@ typedef struct
 int maiorValor, menorValor;
 char obraMaiorNome[50], obraMenorNome[50];
 
+// Função para obter o Nome Da Obras que fora
 void obterNomeObra(int valor, char nomeObra[])
 {
     const char *nomes[] = {"Tesla", "Van Gogh", "O Grito", "Santos Dumont", "Desconhecido"};
@@ -35,6 +36,34 @@ void obterNomeObra(int valor, char nomeObra[])
     }
 }
 
+// Função p/ pegar a quantidade de acessos de cada obra
+int calcObras(int *maiorValor, int *menorValor, char *obraMaiornome, char *obraMenornome)
+{
+    int contadorObras[4] = {0}; // Índice 0: Tesla, 1: Van Gogh, 2: O Grito, 3: Santos Dumont
+
+    FILE *arquivos[4];
+    const char *nomesArquivos[] = {".\\output\\tesla.txt", ".\\output\\vangogh.txt", ".\\output\\grito.txt", ".\\output\\santosDumont.txt"};
+
+    for (int i = 0; i < 4; ++i)
+    {
+        arquivos[i] = fopen(nomesArquivos[i], "r");
+        if (arquivos[i] == NULL)
+        {
+            printf("Erro ao abrir um dos arquivos de contagem de obras.\n");
+            return 1;
+        }
+
+        fscanf(arquivos[i], "%d", &contadorObras[i]);
+
+        fclose(arquivos[i]);
+    }
+
+    encontrarMaiorMenorValor(contadorObras, maiorValor, menorValor, obraMaiornome, obraMenornome);
+
+    return 0;
+}
+
+//função para encotrar a obra mais acessada e menos acessada
 void encontrarMaiorMenorValor(int valores[], int *maior, int *menor, char *nomeMaior, char *nomeMenor)
 {
     int tempMaiorValor = valores[0];
@@ -65,32 +94,7 @@ void encontrarMaiorMenorValor(int valores[], int *maior, int *menor, char *nomeM
     *menor = tempMenorValor;
 }
 
-int calcObras(int *maiorValor, int *menorValor, char *obraMaiornome, char *obraMenornome)
-{
-    int contadorObras[4] = {0}; // Índice 0: Tesla, 1: Van Gogh, 2: O Grito, 3: Santos Dumont
-
-    FILE *arquivos[4];
-    const char *nomesArquivos[] = {".\\output\\tesla.txt", ".\\output\\vangogh.txt", ".\\output\\grito.txt", ".\\output\\santosDumont.txt"};
-
-    for (int i = 0; i < 4; ++i)
-    {
-        arquivos[i] = fopen(nomesArquivos[i], "r");
-        if (arquivos[i] == NULL)
-        {
-            printf("Erro ao abrir um dos arquivos de contagem de obras.\n");
-            return 1;
-        }
-
-        fscanf(arquivos[i], "%d", &contadorObras[i]);
-
-        fclose(arquivos[i]);
-    }
-
-    encontrarMaiorMenorValor(contadorObras, maiorValor, menorValor, obraMaiornome, obraMenornome);
-
-    return 0;
-}
-
+// função que gera o relatorio e imprimi
 int Relatorio()
 {
     RespostaUsuario respostas[MAX_USUARIOS];
@@ -148,7 +152,6 @@ int Relatorio()
             relatorios[numRelatorios].contador = 1;
             numRelatorios++;
 
-            // Encontra a obra mais acessada e a menos acessada
             if (relatorios[numRelatorios - 1].contador > relatorios[obraMaisAcessadaIndex].contador)
                 obraMaisAcessadaIndex = numRelatorios - 1;
             if (relatorios[numRelatorios - 1].contador < relatorios[obraMenosAcessadaIndex].contador)
